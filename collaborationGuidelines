@@ -1,0 +1,17 @@
+[[ ALL FOLLOWED GUIDELINES FOR PORJECT ]]
+
+Coding Guidelines🚦
+  Naming Convention : camelCase
+  
+
+Commit Guidelines  :cop:
+  commits on completion of every functionnality
+
+
+Branch creation Guidelines
+  create a branch with naming Guideline :  featureName_contributorsName_branchNumber 
+  Create a pull request
+
+Pull request aproval guidelines
+  pull request merge shall occur after approval from every team member
+
