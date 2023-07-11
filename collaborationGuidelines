@@ -6,6 +6,7 @@ Coding Guidelines🚦
 
 Commit Guidelines  :cop:
   commits on completion of every functionnality
+  Before commiting or pushing into github , make sure you are pushing in correct branch of projectRental Repo.
 
 
 Branch creation Guidelines
