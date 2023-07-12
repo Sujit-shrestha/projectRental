@@ -1,20 +1,24 @@
 {
   "format": 1,
   "restore": {
-    "Z:\\projectRental\\projectRental\\SemesterPorject\\SemesterPorject.csproj": {}
+    "C:\\Users\\rohit\\OneDrive\\Desktop\\.NET\\projectRental\\SemesterPorject\\SemesterPorject.csproj": {}
   },
   "projects": {
-    "Z:\\projectRental\\projectRental\\SemesterPorject\\SemesterPorject.csproj": {
+    "C:\\Users\\rohit\\OneDrive\\Desktop\\.NET\\projectRental\\SemesterPorject\\SemesterPorject.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "Z:\\projectRental\\projectRental\\SemesterPorject\\SemesterPorject.csproj",
+        "projectUniqueName": "C:\\Users\\rohit\\OneDrive\\Desktop\\.NET\\projectRental\\SemesterPorject\\SemesterPorject.csproj",
         "projectName": "SemesterPorject",
-        "projectPath": "Z:\\projectRental\\projectRental\\SemesterPorject\\SemesterPorject.csproj",
-        "packagesPath": "C:\\Users\\ACER\\.nuget\\packages\\",
-        "outputPath": "Z:\\projectRental\\projectRental\\SemesterPorject\\obj\\",
+        "projectPath": "C:\\Users\\rohit\\OneDrive\\Desktop\\.NET\\projectRental\\SemesterPorject\\SemesterPorject.csproj",
+        "packagesPath": "C:\\Users\\rohit\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\rohit\\OneDrive\\Desktop\\.NET\\projectRental\\SemesterPorject\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
-          "C:\\Users\\ACER\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\rohit\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -50,12 +54,6 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
-          "downloadDependencies": [
-            {
-              "name": "Microsoft.NETCore.App.Host.win-x86",
-              "version": "[6.0.16, 6.0.16]"
-            }
-          ],
           "frameworkReferences": {
             "Microsoft.AspNetCore.App": {
               "privateAssets": "none"
@@ -64,7 +62,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files (x86)\\dotnet\\sdk\\7.0.203\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.202\\RuntimeIdentifierGraph.json"
         }
       }
     }

@@ -2,6 +2,7 @@
 <br />
 <h2>Coding Guidelines🚦</h2>
   Naming Convention : camelCase
+  Class Naming Convention : Capitalize
   
 
 <h2>Commit Guidelines  :cop:</h2>
