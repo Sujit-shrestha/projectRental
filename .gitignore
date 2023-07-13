@@ -1,11 +1,3 @@
-﻿################################################################################
+################################################################################
 # This .gitignore file was automatically created by Microsoft(R) Visual Studio.
 ################################################################################
-
-/SemesterPorject/obj/Debug/net6.0
-/SemesterPorject/.vs
-/SemesterPorject/
-/.vs
-SemesterPorject/.vs/SemesterPorject/v17/.suo
-/SemesterPorject/obj
-SemesterPorject/.vs/SemesterPorject/v17/.suo
