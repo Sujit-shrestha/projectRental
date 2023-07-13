@@ -2,13 +2,9 @@
 # This .gitignore file was automatically created by Microsoft(R) Visual Studio.
 ################################################################################
 
-/SemesterPorject/.vs/ProjectEvaluation
 /SemesterPorject/obj/Debug/net6.0
-/SemesterPorject/.vs/SemesterPorject/DesignTimeBuild
-/SemesterPorject/.vs/SemesterPorject/FileContentIndex/0a644886-12c6-4230-ab93-c69223ac5d66.vsidx
-/SemesterPorject/.vs/SemesterPorject/FileContentIndex/2c00bc98-32e6-4f99-8d0f-27e50d0365de.vsidx
-/SemesterPorject/.vs/SemesterPorject/v17/.futdcache.v2
-/SemesterPorject/.vs/SemesterPorject/v17/.suo
-/SemesterPorject/.vs/SemesterPorject/FileContentIndex/2c00bc98-32e6-4f99-8d0f-27e50d0365de.vsidx
-/SemesterPorject/.vs/SemesterPorject/v17/.suo
-/SemesterPorject/.vs/SemesterPorject/FileContentIndex/2c00bc98-32e6-4f99-8d0f-27e50d0365de.vsidx
+/SemesterPorject/.vs
+/SemesterPorject/
+/.vs
+SemesterPorject/.vs/SemesterPorject/v17/.suo
+/SemesterPorject/obj
