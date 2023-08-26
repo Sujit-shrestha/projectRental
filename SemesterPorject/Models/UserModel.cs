@@ -6,7 +6,6 @@ namespace SemesterPorject.Models
     public class UserModel
     {
         [Key]
-        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int UserId { get; set; }
 
         [Required]
