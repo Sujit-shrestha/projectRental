@@ -10,6 +10,7 @@ namespace SemesterPorject.Data
         {
             
         }
-        public DbSet<RoomData> RoomDataTable { get; set; }
+        //dbset is required in DbContext to make a table in database 
+        public DbSet<RentalSpaceModel> RentalSpace { get; set; }
     }
 }
