@@ -3,6 +3,7 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using SemesterPorject.Data;
 
@@ -11,9 +12,11 @@ using SemesterPorject.Data;
 namespace SemesterPorject.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    partial class ApplicationDbContextModelSnapshot : ModelSnapshot
+    [Migration("20230828051921_UpdateRS")]
+    partial class UpdateRS
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -42,9 +45,6 @@ namespace SemesterPorject.Migrations
                     b.Property<DateTime>("DatePosted")
                         .HasColumnType("datetime2");
 
-                    b.Property<string>("Description")
-                        .HasColumnType("nvarchar(max)");
-
                     b.Property<string>("Floor")
                         .HasColumnType("nvarchar(max)");
 
@@ -55,16 +55,15 @@ namespace SemesterPorject.Migrations
                         .HasColumnType("int");
 
                     b.Property<string>("Lister")
+                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
-
-                    b.Property<byte[]>("ListerImage")
-                        .HasColumnType("varbinary(max)");
 
                     b.Property<string>("Location")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<byte[]>("SpaceImage")
+                        .IsRequired()
                         .HasColumnType("varbinary(max)");
 
                     b.Property<bool?>("WaterFacility")
