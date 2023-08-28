@@ -1,0 +1,78 @@
+﻿@model IEnumerable<RentalSpaceModel>
+@{
+    byte[] ListerImg =null; 
+   
+}
+
+
+<div id="RentalSpace_body_container" class="d-flex" style="position:fixed; width:85%;height:100%">
+    <div id="RentalSpace_list" style=" width:30% ; height:76%; overflow-y:scroll; margin-top:0px;">
+
+        <!--cs code-->
+
+        @foreach (var obj in Model)
+        {
+             ListerImg = obj.ListerImage; // Your byte array containing image data
+
+
+        
+            <div class="RentalSpace_individual_container" style="margin:5px">
+                <div class="card" style="width:100%;">
+                    <div class="card-body">
+
+                        <h4 class="card-title">
+                            @if (ListerImg != null && ListerImg.Length > 0)
+                            {
+                                <img src="data:image/jpeg;base64,@Convert.ToBase64String(ListerImg)" alt="Image" style="height:48PX; width:48PX ; border-radius:25px" />
+                            }
+                            
+                            @obj.Lister</h4>
+                        <p class="card-text">I have 25 more listings.</p>
+                    </div>
+
+                    <!--On loading-->
+                  <!--   <p class="card-text placeholder-glow">
+                        <span class="placeholder col-7"></span>
+                        <span class="placeholder col-3"></span>
+                        <span class="placeholder col-8"></span>
+                        <span class="placeholder col-4"></span>
+                    </p>
+                    -->
+
+
+                    <div class="card-body listing-contents">
+                        <p class="card-text">
+                            <span class="text-primary font-weight-bold"> @(string.IsNullOrWhiteSpace(obj.Description) ? "Beautiful Space for Productive work" : obj.Description)</span>
+                            <span class="text-secondary">@obj.DatePosted.Date.ToShortDateString()</span>
+                            <br>
+                            <span class="text-primary">@(string.IsNullOrWhiteSpace(obj.Location) ? "Contact us for Location" : obj.Location)</span>
+                            <br>
+                            <span class="font-weight-bold"> Rs.@obj.Cost/month</span>
+                        </p>
+                      
+                    </div>
+                   
+                </div>
+                
+            </div>
+        
+        }
+           
+       <!-- Pagination-->
+        <nav aria-label="Page navigation " style="margin-top: 5px">
+            <ul class="pagination justify-content-center">
+                <li class="page-item disabled">
+                    <a class="page-link" href="#" tabindex="-1">Previous</a>
+                </li>
+                <li class="page-item"><a class="page-link" href="#">1</a></li>
+                <li class="page-item"><a class="page-link" href="#">2</a></li>
+                <li class="page-item"><a class="page-link" href="#">3</a></li>
+                <li class="page-item">
+                    <a class="page-link" href="#">Next</a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+
+    <partial name="VT_ListingDescription" />
+</div>
