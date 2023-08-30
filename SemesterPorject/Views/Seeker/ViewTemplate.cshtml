@@ -1,21 +1,29 @@
 ﻿@model IEnumerable<RentalSpaceModel>
 @{
-    byte[] ListerImg =null; 
-   
+    byte[] ListerImg =null;
+    bool isFirstIteration = true;
+    ViewBag.Id = null;
+
+
 }
 
 
+
 <div id="RentalSpace_body_container" class="d-flex" style="position:fixed; width:85%;height:100%">
-    <div id="RentalSpace_list" style=" width:30% ; height:76%; overflow-y:scroll; margin-top:0px;">
+    <div id="RentalSpace_list" style=" width:30% ; height:76%; overflow-y:scroll; margin-top:0px;" >
 
         <!--cs code-->
 
         @foreach (var obj in Model)
         {
-             ListerImg = obj.ListerImage; // Your byte array containing image data
-
-
+        ListerImg = obj.ListerImage; // Your byte array containing image data
         
+        if (isFirstIteration)
+        {
+        ViewBag.Id = obj.RentalSpaceID;
+        isFirstIteration =false;
+        }
+
             <div class="RentalSpace_individual_container" style="margin:5px">
                 <div class="card" style="width:100%;">
                     <div class="card-body">
@@ -23,7 +31,7 @@
                         <h4 class="card-title">
                             @if (ListerImg != null && ListerImg.Length > 0)
                             {
-                                <img src="data:image/jpeg;base64,@Convert.ToBase64String(ListerImg)" alt="Image" style="height:48PX; width:48PX ; border-radius:25px" />
+                                <img src="data:image/jpeg;base64,@Convert.ToBase64String(ListerImg)" alt="Image" class="border border-primary" style="height:48PX; width:48PX ; border-radius:25px" />
                             }
                             
                             @obj.Lister</h4>
@@ -39,19 +47,19 @@
                     </p>
                     -->
 
-
-                    <div class="card-body listing-contents">
+                 
+                    <div class="card-body listing-contents" id="@obj.RentalSpaceID" "onclick="DescriptionSetterFunction(@obj.RentalSpaceID)"}">
                         <p class="card-text">
                             <span class="text-primary font-weight-bold"> @(string.IsNullOrWhiteSpace(obj.Description) ? "Beautiful Space for Productive work" : obj.Description)</span>
                             <span class="text-secondary">@obj.DatePosted.Date.ToShortDateString()</span>
                             <br>
-                            <span class="text-primary">@(string.IsNullOrWhiteSpace(obj.Location) ? "Contact us for Location" : obj.Location)</span>
+                            <span style="border-radius:4px"><i class="bi bi-geo-alt"></i> @(string.IsNullOrWhiteSpace(obj.Location) ? "Contact us for Location" : obj.Location)</span>
                             <br>
                             <span class="font-weight-bold"> Rs.@obj.Cost/month</span>
                         </p>
                       
                     </div>
-                   
+                  
                 </div>
                 
             </div>
@@ -73,6 +81,19 @@
             </ul>
         </nav>
     </div>
+  
 
-    <partial name="VT_ListingDescription" />
+    @await Html.PartialAsync("VT_ListingDescription", Model)
+  
 </div>
+@section script{
+
+    <script>
+    function DescriptionSetterFunction(id){
+       
+            // Set a cookie with name "username" and value "john"
+            document.cookie = "ReqId=id";
+</script>
+
+   
+}

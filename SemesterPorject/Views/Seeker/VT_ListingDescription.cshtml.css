@@ -1,0 +1,21 @@
+﻿.image_container{
+    border:2PX solid red;
+    width:100%;
+    height:350PX;
+
+   background-color:dimgrey;
+  
+}
+.image_container img{
+    height:100%;
+    width:100%;
+    object-fit:contain;
+}
+#text_contains .col-1 {
+    margin: 2px;
+    flex: 1 1 100px;
+    max-width: 180px;
+    background-color: silver;
+    font-weight: bold;
+    border-radius:2px;
+}

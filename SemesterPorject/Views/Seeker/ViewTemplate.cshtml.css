@@ -17,4 +17,5 @@
 }
 .listing-contents:hover {
     background-color: hsla(217, 89%, 51%, 0.5);
+    cursor:pointer;
 }
