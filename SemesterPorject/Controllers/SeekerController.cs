@@ -16,10 +16,11 @@ namespace SemesterPorject.Controllers
         public IActionResult Index()
         {
             IEnumerable<RentalSpaceModel> RentalSpaceList = _db.RentalSpace;
-
+            ViewBag.ReqId = 2;
             ViewBag.DisableFooter = true;
             return View(RentalSpaceList);
         }
         
+     
     }
 }
