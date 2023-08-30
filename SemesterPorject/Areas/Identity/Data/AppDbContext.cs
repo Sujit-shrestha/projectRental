@@ -2,6 +2,7 @@
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 using SemesterPorject.Areas.Identity.Data;
+using SemesterPorject.Models;
 
 namespace SemesterPorject.Data;
 
@@ -11,6 +12,8 @@ public class AppDbContext : IdentityDbContext<AppUser>
         : base(options)
     {
     }
+
+    public DbSet<RoomData> RoomData { get; set; }
 
     protected override void OnModelCreating(ModelBuilder builder)
     {
