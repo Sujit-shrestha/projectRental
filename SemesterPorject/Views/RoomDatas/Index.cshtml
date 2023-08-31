@@ -5,68 +5,6 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<!--
-<h1>Index</h1>
-
-<p>
-    <a asp-action="Create">Add New Room</a>
-</p>
-<table class="table">
-    <thead>
-        <tr>
-            <th>
-                @Html.DisplayNameFor(model => model.Location)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Length)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.breadth)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.height)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.color)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.waterFacility)
-            </th>
-            <th></th>
-        </tr>
-    </thead>
-    <tbody>
-@foreach (var item in Model) {
-        <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.Location)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Length)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.breadth)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.height)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.color)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.waterFacility)
-            </td>
-            <td>
-                <a asp-action="Edit" asp-route-id="@item.RoomId">Edit</a> |
-                <a asp-action="Details" asp-route-id="@item.RoomId">Details</a> |
-                <a asp-action="Delete" asp-route-id="@item.RoomId">Delete</a>
-            </td>
-        </tr>
-}
-    </tbody>
-</table>
--->
-
 
 <h1>Inventory of Chambers</h1>
 
