@@ -82,21 +82,36 @@
         </nav>
     </div>
   
-    <div id="RentalSpace_description" class="card d-flex  " style="width:100% ; height:76%; overflow-y:scroll; overflow-x:hidden; position;">
-
-      <partial name="LoadingPlaceholderForListingDescription" />
-      <partial name="VT_ListingDescription" />
-       
+    <div id="RentalSpace_description" class="card d-flex  " style="width:100% ; height:76%; overflow-y:scroll; overflow-x:hidden;">
+        @await Html.PartialAsync("LoadingPlaceholderForListingDescription")
     </div>
+
+    <div id="hiddenPartialView" style="display: none;">
+        @await Html.PartialAsync("VT_ListingDescription")
+    </div>
+ 
+
   
 </div>
-@section script{
+<script>
+    $(document).ready(
+        function () {
+            var partialContent = $("#hiddenPartialView").html();
+            $("#RentalSpace_description").html(partialContent);
+        }
+    )
+    
+</script>
 
-    <script>
+@section Scripts{
+
+<script>
     function DescriptionSetterFunction(id){
-       
             // Set a cookie with name "username" and value "john"
             document.cookie = "ReqId=id";
+    } 
+
+      
 </script>
 
    
