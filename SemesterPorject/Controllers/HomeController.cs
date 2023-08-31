@@ -15,7 +15,7 @@ namespace SemesterPorject.Controllers
 
         public IActionResult Index()
         {
-            return View();
+            return RedirectToAction("Index","RoomDatas");
         }
 
         public IActionResult Privacy()
